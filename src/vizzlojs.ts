@@ -3,11 +3,28 @@ import { default as ajax } from './request'
 namespace Vizzlo {
   export type Record = {}
 
+  export interface Style {
+    width?: number
+    height?: number
+    font_zoom?: number
+    hide_title?: boolean
+    hide_branding?: boolean
+    hide_annotations?: boolean
+    subtitle?: string
+    footer?: string
+    margin?: {}
+    annotations?: {}[]
+    description?: string
+  }
+
   export interface Document {
-    title: string
-    settings: any
-    style: any
-    data: Record[]
+    plugin_id: string
+    title?: string
+    settings?: any
+    style?: Style
+    theme?: string
+    custom_theme?: any
+    data?: Record[]
   }
 
   export let APIKey: string
