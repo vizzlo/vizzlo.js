@@ -1,4 +1,4 @@
-import DummyClass from '../src/vizzlojs'
+import Vizzlo from '../src/vizzlojs'
 
 /**
  * Dummy test
@@ -8,7 +8,7 @@ describe('Dummy test', () => {
     expect(true).toBeTruthy()
   })
 
-  it('DummyClass is instantiable', () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+  it('Have empty API key', () => {
+    expect(Vizzlo.APIKey).toBeUndefined()
   })
 })
