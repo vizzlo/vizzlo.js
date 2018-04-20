@@ -8,12 +8,10 @@ import uglify from 'rollup-plugin-uglify';
 
 const pkg = require('./package.json');
 
-const libraryName = 'vizzlojs';
-
 export default {
-  input: `src/${libraryName}.ts`,
+  input: `src/vizzlojs.ts`,
   output: [
-    { file: pkg.main, name: 'vizzlo.js', format: 'umd' },
+    { file: pkg.main, name: 'Vizzlo', format: 'umd' },
     { file: pkg.module, format: 'es' },
   ],
   sourcemap: true,

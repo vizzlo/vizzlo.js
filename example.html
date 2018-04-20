@@ -1,0 +1,43 @@
+
+<head>
+    <meta charset="utf-8" />
+    <title>Visualization Example</title>
+    <script src="dist/vizzlo.min.js"></script>
+</head>
+
+<body>
+
+<h1>Hello World!</h1>
+
+<div id="basic-pie-chart"></div>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",function() {
+    Vizzlo.APIKey = '';
+	Vizzlo.Visualize('basic-pie-chart', {
+		theme: "scotty",
+		plugin_id: "17d15712-206e-4cfd-8967-74fda1ff60fd",
+		title: "This is a pie chart",
+		data: [
+            {
+                label: "Alice",
+                value: 85
+            },
+            {
+                label:"Bob",
+                value: 15,
+                highlighted: true
+            }
+        ],
+		settings: {
+			rulesets: {
+				value: {
+                    displayAsPercentage: true
+				}
+			}
+		}
+	});
+});
+</script>
+
+</body>
