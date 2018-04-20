@@ -9,7 +9,7 @@ import uglify from 'rollup-plugin-uglify';
 const pkg = require('./package.json');
 
 export default {
-  input: `src/vizzlojs.ts`,
+  input: `src/index.ts`,
   output: [
     { file: pkg.main, name: 'Vizzlo', format: 'umd' },
     { file: pkg.module, format: 'es' },
@@ -31,9 +31,9 @@ export default {
     // which external modules to include in the bundle
     // https://github.com/rollup/rollup-plugin-node-resolve#usage
     resolve(),
-
     // Resolve source maps to the original source
     sourceMaps(),
+    // Minify the output
     uglify(),
   ],
 }
