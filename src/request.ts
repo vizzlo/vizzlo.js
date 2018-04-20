@@ -1,5 +1,7 @@
+/** @private */
 export type RequestCallback = (txt: string, code: number, req: XMLHttpRequest) => void;
 
+/** @private */
 export function httpRequest(opts: {
     token: string;
     type?: string;
